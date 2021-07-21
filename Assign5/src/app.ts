@@ -8,6 +8,7 @@ const app: Application = express();
 
 app.use(express.json());
 
+
 //READ
 app.get('/user/list', (req: Request, res: Response) => {
     const users = getUserData();
