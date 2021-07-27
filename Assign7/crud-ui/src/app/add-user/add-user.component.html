@@ -1,0 +1,55 @@
+<h2>Add new user</h2>
+
+<form [formGroup]="addUser" (ngSubmit)="collectUser()">
+  <div class="form-group">
+    <label for="exampleInput">Id</label>
+    <input
+      type="number"
+      class="form-control"
+      id="exampleInput"
+      formControlName="roll"
+      placeholder="Enter user id"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleInput1">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInput1"
+      formControlName="name"
+      placeholder="Enter name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleInput2">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInput2"
+      formControlName="email"
+      placeholder="Enter email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleInput3">Contact</label>
+    <input
+      type="number"
+      class="form-control"
+      id="exampleInput3"
+      formControlName="contact"
+      placeholder="Enter mobile number"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleInput4">Role</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInput4"
+      formControlName="role"
+      placeholder="Enter User Role"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
