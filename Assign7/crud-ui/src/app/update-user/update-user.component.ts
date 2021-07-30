@@ -13,10 +13,13 @@ export class UpdateUserComponent implements OnInit {
   // userData: any = {};
 
   editUser = new FormGroup({
-    roll: new FormControl(''),
+    uid: new FormControl(''),
     name: new FormControl(''),
     email: new FormControl(''),
     contact: new FormControl(''),
+    cname: new FormControl(''),
+    website: new FormControl(''),
+    customer_address: new FormControl(''),
     role: new FormControl('')
   })
   constructor(private route: ActivatedRoute, private crud: CrudService) {
@@ -31,10 +34,13 @@ export class UpdateUserComponent implements OnInit {
       console.log(result);
       // this.userData = result;
       this.editUser = new FormGroup({
-        roll: new FormControl(result[0].roll),
+        uid: new FormControl(result[0].uid),
         name: new FormControl(result[0].name),
         email: new FormControl(result[0].email),
         contact: new FormControl(result[0].contact),
+        cname: new FormControl(result[0].cname),
+        website: new FormControl(result[0].website),
+        customer_address: new FormControl(result[0].customer_address),
         role: new FormControl(result[0].role)
       })
     }, (err: Error) => {
